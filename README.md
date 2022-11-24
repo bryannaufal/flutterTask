@@ -70,3 +70,30 @@ Membuat form yang menerima input judul, nominal, jenis, dan tanggal pada budgetF
 Menampilkan output berupa budget yang sudah diinput pada budgetList.dart
 
 
+
+# Integrasi Web Service pada Flutter
+
+## Jawaban Pertanyaan
+
+**Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?**
+Kita bisa melakukan pengambilan data JSON tanpa membuat model terlebih dahulu, tetapi kita jadi tidak bisa mengaksesnya sebagai class dan hal tersebut tidak efisien
+
+**Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.**
+`FutureBuilder` Membuat widget berdasarkan data yang baru saja diambil
+`SizedBox` Membuat kotak dengan ukuran tetap
+`MaterialPageRoute` Mengganti halaman
+`Checkbox` Membuat sebuah check box
+
+
+**Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.**
+Kita perlu menambahkan dependancy http terlebih dahulu untuk melakukan HTTP request sepert GET, POST, PUSH, dll.
+Kita juga sangat disarankan untuk membuat model yang sesuai dengan respons dari data yang berasal dari web service
+Setelah itu, kita bisa melakukan HTTP request dan dikonversi
+Data yang telah dikonversi dapat ditampilkan menggunakan FutureBuilder
+
+
+**Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.**
+Pertama-tama saya melakukan refaktor terlebih dahulu pada kodingan saya dengan membuat model dan page pada folder terpisah
+Membuat model myWatchList di `myWatchList.dart`
+Membuat `fetchData.dart` untuk melakukan pengambilan data dari webservice
+Membuat page untuk menampilkan daftar nama film serta page untuk detail film dan ditambahkan pada drawer
