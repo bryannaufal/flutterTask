@@ -1,10 +1,11 @@
+import 'package:counter_7/page/watchListMain.dart';
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/budgetForm.dart';
-import 'package:counter_7/budgetList.dart';
+import 'package:counter_7/page/budgetForm.dart';
+import 'package:counter_7/page/budgetList.dart';
 
-class myDrawer extends StatelessWidget {
-  const myDrawer({Key? key}) : super(key: key);
+class MyDrawer extends StatelessWidget {
+  const MyDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +40,16 @@ class myDrawer extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => const budgetList()),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('WishList'),
+            onTap: () {
+              // Route menu ke halaman utama
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const WatchListPage()),
               );
             },
           ),

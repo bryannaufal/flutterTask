@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:counter_7/drawer.dart';
-import 'package:counter_7/budgetData.dart';
+import 'package:counter_7/page/drawer.dart';
+import 'package:counter_7/model/budgetData.dart';
 
 class MyFormPage extends StatefulWidget {
   const MyFormPage({super.key});
@@ -30,7 +30,7 @@ class _MyFormPageState extends State<MyFormPage> {
         appBar: AppBar(
           title: Text('Form'),
         ),
-        drawer: const myDrawer(),
+        drawer: const MyDrawer(),
         body: Form(
           key: _formKey,
           child: SingleChildScrollView(

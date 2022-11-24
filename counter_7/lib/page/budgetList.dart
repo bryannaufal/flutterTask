@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:counter_7/drawer.dart';
-import 'package:counter_7/budgetData.dart';
+import 'package:counter_7/page/drawer.dart';
+import 'package:counter_7/model/budgetData.dart';
 import 'package:intl/intl.dart';
 
 class budgetList extends StatefulWidget {
@@ -17,7 +17,7 @@ class _budgetListState extends State<budgetList> {
       appBar: AppBar(
         title: Text('Data Budget'),
       ),
-      drawer: myDrawer(),
+      drawer: MyDrawer(),
       body: ListView.builder(
         itemBuilder: (context, index) {
           return Card(
